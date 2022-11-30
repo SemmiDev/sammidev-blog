@@ -1,0 +1,24 @@
+---
+title: 'Regresi Logistik'
+description: 'Mengenal regresi logistik pada machine learning   .'
+excerpt: 'Regresi Logistik merupakan salah satu metode yang bisa digunakan untuk melakukan klasifikasi. Regresi Logistik biasanya digunakan untuk menyelesaikan kasus-kasus klasifikasi biner dimana masalah-masalah yang dihadapi hanya memiliki atau menghasilkan dua output kelas...'
+image: '~/assets/images/astronaut.jpg'
+tags: [supervised learning, regresi, sigmoid, machine learning]
+canonical: https://sammidev.codes # When posting content to multiple platforms at the same time (such as this website and Medium) and want to specify the ultimate authority. Remove it to automatically generate canonical
+---
+
+**Regresi Logistik** merupakan salah satu metode yang bisa digunakan untuk melakukan **klasifikasi**.
+
+> **Klasifikasi** adalah suatu pengelompokan data di mana data yang digunakan mempunyai **label** atau **target**. Pada jenis task ini, program komputer diminta untuk **menebak** atau **memilih** kategori/kelas dari data. Pada task ini **kategori/kelas** telah ditetapkan sebelumnya. Contohnya adalah **klasifikasi emosi** pada foto manusia dengan **tiga** kelas yaitu **Happy, Angry dan Neutral**. Aplikasi tersebut harus memilih salah satu (dalam kasus tertentu bisa lebih dari satu) dari **tiga kelas** tersebut berdasarkan foto yang diberikan.
+
+**Regresi Logistik** ini biasanya digunakan untuk menyelesaikan kasus-kasus **klasifikasi biner** dimana masalah-masalah yang dihadapi hanya memiliki atau menghasilkan dua output kelas, seperti **ya atau tidak**, **0 atau 1** untuk setiap input data yang diberikan.
+
+Metode ini menggunakan beberapa variabel **prediktor**, baik **numerik** maupun **kategori**. Misalnya, probabilitas bahwa orang yang menderita **serangan jantung** pada waktu tertentu dapat diprediksi dari **informasi usia, jenis kelamin, dan indeks massa tubuh**.
+
+Sebagai contoh, kita ingin memprediksi tumor ganas berdasarkan ukurannya. Semakin besar ukurannya maka tumor dapat dikatakan tumor ganas. Jika digambarkan dalam bentuk grafis, dengan mengganti nilai ganas dan tidak menjadi 1 dan 0 maka didapatkan seperti pada gambar dibawah. Jika permasalahan ini dipecahkan menggunakan metode linier maka model yang dihasilkan tidak akurat karena variabel dependennya bernilai hanya 0 atau 1 . Fungsi linier tidak cocok untuk mengatasi permasalahan ini, salah satu fungsi yang cocok adalah **fungsi logistik**
+
+![Regresi Linear](/regresi-linear.png)
+
+## Fungsi Logistik
+
+**Regresi logistik** diambil namanya dari fungsi yang digunakan yaitu **fungsi logistik**. **Fungsi logistik** ini sering juga disebut fungsi **sigmoid** yang dikembangkan oleh ahli statistika untuk mendeskripsikan pertumbuhan populasi pada kasus ekologi. Kurva yang dihasilkan berbentuk S yang bernilai di antara 0 dan 1. Adapun formula untuk `sigmoid` adalah ... to be continue

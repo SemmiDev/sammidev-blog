@@ -1,0 +1,26 @@
+---
+import { SITE } from '~/config.mjs';
+import { getCanonical, getHomePermalink } from '~/utils/permalinks';
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+
+const meta = {
+	title: SITE.title,
+	description: SITE.description,
+	canonical: getCanonical(getHomePermalink()),
+};
+---
+
+<Layout {meta}>
+	<Hero />
+	<Features />
+	<!-- <Journey /> -->
+	<!-- <Features2 /> -->
+	<!-- <Features3 /> -->
+	<!-- <HighlightedPosts /> -->
+	<!-- <FAQs /> -->
+	<!-- <Stats /> -->
+	<!-- <CallToAction /> -->
+</Layout>

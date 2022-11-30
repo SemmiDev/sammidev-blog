@@ -1,0 +1,45 @@
+---
+import { Icon } from 'astro-icon';
+
+const items = [
+	{
+		title: 'Student',
+		description: 'Currently majoring in CS at the Universitas Riau.',
+		icon: 'flat-color-icons:factory',
+	},
+	{
+		title: 'Assistant',
+		description: 'Teach as a member of a teaching team within an established programme of study.',
+		icon: 'flat-color-icons:faq',
+	},
+	{
+		title: 'Engineer',
+		description: 'Developing new things and maintaining existing stuffs.',
+		icon: 'flat-color-icons:engineering',
+	},
+	{
+		title: 'Creator',
+		description: 'Making interesting youtube contents for learning and fun.',
+		icon: 'flat-color-icons:electronics',
+	},
+];
+---
+
+<section class="relative">
+	<div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+		<div class="grid gap-6 md:grid-cols-2 items-start my-12 dark:text-white">
+			{
+				items.map(({ title, description, icon }) => (
+					<div class="relative flex h-full flex-col rounded bg-white p-6 outline outline-slate-100 transition dark:bg-slate-900 dark:outline-slate-800">
+						<div class="mb-4 flex items-center">
+							<Icon name={icon} class="h-12 w-12" />
+
+							<div class="ml-4 text-xl font-bold">{title}</div>
+						</div>
+						<p class="text-md text-gray-500 dark:text-gray-400">{description}</p>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
