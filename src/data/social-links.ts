@@ -24,4 +24,9 @@ export const dataSocialLinks = [
 		href: 'https://instagram.com/sammidev_',
 		iconName: 'tabler:brand-instagram',
 	},
+	{
+		label: 'WhatsApp',
+		href: 'https://api.whatsapp.com/send?phone=6282387325971&text=hello%20sam%20%F0%9F%98%89%F0%9F%98%8A',
+		iconName: 'tabler:brand-whatsapp',
+	},
 ];

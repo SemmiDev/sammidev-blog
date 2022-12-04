@@ -5,9 +5,10 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
+import Journey from '~/components/widgets/Journey.astro';
 
 const meta = {
-	title: SITE.title,
+	title: SITE.name,
 	description: SITE.description,
 	canonical: getCanonical(getHomePermalink()),
 };
@@ -15,12 +16,5 @@ const meta = {
 
 <Layout {meta}>
 	<Hero />
-	<Features />
 	<!-- <Journey /> -->
-	<!-- <Features2 /> -->
-	<!-- <Features3 /> -->
-	<!-- <HighlightedPosts /> -->
-	<!-- <FAQs /> -->
-	<!-- <Stats /> -->
-	<!-- <CallToAction /> -->
 </Layout>

@@ -12,16 +12,19 @@ module.exports = {
 			fontFamily: {
 				sans: ["'InterVariable'", ...defaultTheme.fontFamily.sans],
 			},
+			animation: {
+				'spin-slow': 'spin 12s linear infinite',
+			},
 		},
 	},
-	plugins: [require('@tailwindcss/typography')],
+	plugins: [require('@tailwindcss/typography'), require('daisyui')],
 	darkMode: 'class',
 };
 
-/* 
+/*
 
   Alternative tailwind.config.js
-  
+
   NOTE: Add this fonts to <head>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap" rel="stylesheet" />
 */
