@@ -1,0 +1,19 @@
+---
+import { SITE } from '~/config.mjs';
+import { getCanonical, getHomePermalink } from '~/utils/permalinks';
+import Layout from '~/layouts/PageLayout.astro';
+
+import Certificate from '~/components/journey/certificate';
+
+const meta = {
+	title: SITE.name,
+	description: SITE.description,
+	canonical: getCanonical(getHomePermalink()),
+};
+---
+
+<Layout {meta}>
+	<main class="mx-24 max-w-7xl">
+		<Certificate />
+	</main>
+</Layout>

@@ -4,8 +4,13 @@ import { getCanonical, getHomePermalink } from '~/utils/permalinks';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Features from '~/components/widgets/Features.astro';
 import Journey from '~/components/widgets/Journey.astro';
+import Contact from '~/components/journey/contact';
+import Education from '~/components/journey/education';
+import Experience from '~/components/journey/experience';
+import Achievement from '~/components/journey/achievement';
+import Skills from '~/components/journey/skills';
+import Certificate from '~/components/journey/certificate';
 
 const meta = {
 	title: SITE.name,
@@ -17,4 +22,70 @@ const meta = {
 <Layout {meta}>
 	<Hero />
 	<Journey />
+
+	<!-- contact -->
+	<input type="checkbox" id="my-modal-contact" class="modal-toggle" />
+	<div class="modal modal-bottom sm:modal-middle">
+		<div class="modal-box bg-slate-900">
+			<Contact client:visible />
+			<div class="modal-action">
+				<label for="my-modal-contact" class="btn btn-error">Close</label>
+			</div>
+		</div>
+	</div>
+
+	<!-- education -->
+	<input type="checkbox" id="my-modal-education" class="modal-toggle" />
+	<div class="modal modal-bottom sm:modal-middle">
+		<div class="modal-box bg-slate-900">
+			<Education client:visible />
+			<div class="modal-action">
+				<label for="my-modal-education" class="btn btn-error">Close</label>
+			</div>
+		</div>
+	</div>
+
+	<!-- experience -->
+	<input type="checkbox" id="my-modal-experience" class="modal-toggle" />
+	<div class="modal modal-bottom sm:modal-middle">
+		<div class="modal-box bg-slate-900">
+			<Experience client:visible />
+			<div class="modal-action">
+				<label for="my-modal-experience" class="btn btn-error">Close</label>
+			</div>
+		</div>
+	</div>
+
+	<!-- achievement -->
+	<input type="checkbox" id="my-modal-achievement" class="modal-toggle" />
+	<div class="modal modal-bottom sm:modal-middle">
+		<div class="modal-box bg-slate-900">
+			<Achievement client:visible />
+			<div class="modal-action">
+				<label for="my-modal-achievement" class="btn btn-error">Close</label>
+			</div>
+		</div>
+	</div>
+
+	<!-- skills -->
+	<input type="checkbox" id="my-modal-skills" class="modal-toggle" />
+	<div class="modal modal-bottom sm:modal-middle">
+		<div class="modal-box bg-slate-900">
+			<Skills client:visible />
+			<div class="modal-action">
+				<label for="my-modal-skills" class="btn btn-error">Close</label>
+			</div>
+		</div>
+	</div>
+
+	<!--  certificate -->
+	<input type="checkbox" id="my-modal-certificate" class="modal-toggle" />
+	<div class="modal modal-bottom sm:modal-middle">
+		<div class="modal-box bg-slate-900">
+			<Certificate client:visible />
+			<div class="modal-action">
+				<label for="my-modal-certificate" class="btn btn-error">Close</label>
+			</div>
+		</div>
+	</div>
 </Layout>
