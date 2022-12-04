@@ -27,14 +27,18 @@ import Picture from '~/components/core/Picture.astro';
 		>
 		<a
 			href="/certificate"
+			target="_blank noopener noreferrer"
 			class="px-3 py-2 rounded-xl text-xs text-[#ffa6c9] border-1 border border-[#ffa6c9] hover:bg-[#ffa6c9] hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
 			>Certificate</a
-		><a
+		><label
+			for="my-modal-portfolio"
 			class="px-3 py-2 rounded-xl text-xs text-[#8bffd8] border-1 border border-[#8bffd8] hover:bg-[#8bffd8] hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
-			>Portfolio</a
-		><a
-			class="px-3 py-2 rounded-xl text-xs text-[#149fc8] border-1 border border-[#149fc8] hover:bg-[#149fc8] hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
-			>Content</a
+			>Portfolio</label
+		>
+		<a
+			href="/blog"
+			class="px-3 py-2 rounded-xl text-xs text-[#149fc8] border-1 border border-blue-600 hover:bg-blue-600 hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
+			>Posts</a
 		>
 		<label
 			for="my-modal-contact"

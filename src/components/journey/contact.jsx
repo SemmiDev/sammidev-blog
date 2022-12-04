@@ -32,11 +32,11 @@ function Contact() {
 					ref={nameRef}
 					required={true}
 					placeholder="Type your name"
-					className="text-primary input-bordered input-primary input w-full max-w-xs text-sm"
+					className="text-primary input-bordered input-primary input w-full max-w-xs bg-white text-sm text-black"
 				/>
 
 				<textarea
-					className="border-primary text-primary textarea w-full max-w-xs border text-sm"
+					className="border-primary text-primary textarea w-full max-w-xs border bg-white text-sm text-black"
 					placeholder="Type your message"
 					ref={messageRef}
 					required={true}

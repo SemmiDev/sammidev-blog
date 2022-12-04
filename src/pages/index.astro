@@ -10,7 +10,7 @@ import Education from '~/components/journey/education';
 import Experience from '~/components/journey/experience';
 import Achievement from '~/components/journey/achievement';
 import Skills from '~/components/journey/skills';
-import Certificate from '~/components/journey/certificate';
+import Portfolio from '~/components/journey/portfolio';
 
 const meta = {
 	title: SITE.name,
@@ -78,13 +78,13 @@ const meta = {
 		</div>
 	</div>
 
-	<!--  certificate -->
-	<input type="checkbox" id="my-modal-certificate" class="modal-toggle" />
+	<!--  portfolio -->
+	<input type="checkbox" id="my-modal-portfolio" class="modal-toggle" />
 	<div class="modal modal-bottom sm:modal-middle">
 		<div class="modal-box bg-slate-900">
-			<Certificate client:visible />
+			<Portfolio client:visible />
 			<div class="modal-action">
-				<label for="my-modal-certificate" class="btn btn-error">Close</label>
+				<label for="my-modal-portfolio" class="btn btn-error">Close</label>
 			</div>
 		</div>
 	</div>

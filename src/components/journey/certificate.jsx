@@ -5,12 +5,12 @@ import { CertificateIcon } from '../icons/icons';
 function Certificate() {
 	return (
 		<div>
-			<h1 className="text-secondary mx-12 mt-5 mb-8 flex items-center justify-center gap-x-2 text-center text-3xl font-bold md:text-4xl">
+			<h1 className="text-secondary mx-3 mt-5 mb-8 flex items-center justify-center gap-x-2 text-center text-3xl font-bold md:text-4xl lg:mx-12">
 				<CertificateIcon /> Certificate
 			</h1>
 			<div className="mx-auto mb-5 flex flex-col items-center justify-center">
 				<div className="indicator my-5 ">
-					<span className="badge badge-primary indicator-item">15+</span>
+					<span className="badge-primary badge indicator-item">15+</span>
 					<a
 						className="btn-secondary btn"
 						href="https://drive.google.com/drive/folders/1YofO6A6a3o2bLTxSryQ9S5czpkTA1B-A"
