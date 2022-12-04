@@ -17,13 +17,13 @@ const currentYear = currentDate.getFullYear();
 						return (
 							<li>
 								<a
-									class="700 mx-1 inline-flex items-center rounded-lg bg-gray-200 p-2 text-sm shadow shadow focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border dark:border-[black] dark:bg-[#7d93d3] dark:text-white  dark:focus:ring-gray-700"
+									class="700 mr-1 inline-flex items-center rounded-full bg-gray-200 bg-transparent p-2 text-sm shadow shadow hover:bg-black focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border dark:border-purple-200/30  dark:text-white  dark:focus:ring-gray-700"
 									aria-label={socialLink.label}
 									href={socialLink.href}
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<Icon name={socialLink.iconName} class="h-5 w-5 text-black" />
+									<Icon name={socialLink.iconName} class="h-5 w-5 text-black dark:text-white" />
 								</a>
 							</li>
 						);
