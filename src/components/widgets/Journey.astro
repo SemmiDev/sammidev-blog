@@ -1,49 +1,76 @@
 ---
-import { Icon } from 'astro-icon';
-import Picture from '~/components/core/Picture.astro';
+import {
+	SkillsIcon,
+	EducationIcon,
+	ExperienceIcon,
+	AchievementIcon,
+	CertificateIcon,
+	PortfolioIcon,
+	ContactIcon,
+} from '../icons/icons';
 ---
 
-<section class="px-4 mx-auto -my-5 md:px-8 max-w-lg">
+<section class="px-4 mx-auto -my-8 md:-my-16 md:px-8 max-w-lg">
 	<div class="w-full flex flex-wrap gap-2 justify-center items-center">
 		<label
 			for="my-modal-skills"
-			class="px-3 py-2 rounded-xl text-xs text-yellow-400 border-1 border border-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
-			>Sklls</label
+			class="px-3 py-2 flex items-center justify-evenly gap-1 rounded-xl text-xs text-yellow-400 border-1 border border-dashed border-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
+		>
+			<SkillsIcon className="h-4 w-4" />
+			Skills</label
 		>
 		<label
 			for="my-modal-education"
-			class="px-3 py-2 rounded-xl text-xs text-green-400 border-1 border border-green-400 hover:bg-green-400 hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
-			>Education</label
+			class="px-3 py-2 flex items-center justify-evenly gap-1 rounded-xl text-xs text-green-400 border-1 border-dashed border border-green-400 hover:bg-green-400 hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
+		>
+			<EducationIcon className="h-4 w-4" />
+			Education</label
 		>
 		<label
 			for="my-modal-experience"
-			class="px-3 py-2 rounded-xl text-xs text-blue-400 border-1 border border-blue-400 hover:bg-blue-400 hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
-			>Experience</label
+			class="px-3 py-2 flex items-center justify-evenly gap-1 rounded-xl text-xs text-blue-400 border-1 border-dashed border border-blue-400 hover:bg-blue-400 hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
+		>
+			<ExperienceIcon className="h-4 w-4" />
+			Experience</label
 		>
 		<label
 			for="my-modal-achievement"
-			class="px-3 py-2 rounded-xl text-xs text-purple-400 border-1 border border-purple-400 hover:bg-purple-400 hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
-			>Achievement</label
+			class="px-3 py-2 flex items-center justify-evenly gap-1 rounded-xl text-xs text-purple-400 border-1 border-dashed border border-purple-400 hover:bg-purple-400 hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
+		>
+			<AchievementIcon className="h-4 w-4" />
+			Achievement</label
 		>
 		<a
 			href="/certificate"
 			target="_blank noopener noreferrer"
-			class="px-3 py-2 rounded-xl text-xs text-[#ffa6c9] border-1 border border-[#ffa6c9] hover:bg-[#ffa6c9] hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
-			>Certificate</a
+			class="px-3 py-2 flex items-center justify-evenly gap-1 rounded-xl text-xs text-[#0b8089] border-1 border-dashed border border-[#0b8089] hover:bg-[#0b8089] hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
+		>
+			<CertificateIcon className="h-4 w-4" />
+			Certificate</a
 		><label
 			for="my-modal-portfolio"
-			class="px-3 py-2 rounded-xl text-xs text-[#8bffd8] border-1 border border-[#8bffd8] hover:bg-[#8bffd8] hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
-			>Portfolio</label
+			class="px-3 py-2 flex items-center justify-evenly gap-1 rounded-xl text-xs text-[#8bffd8] border-1 border-dashed border border-[#8bffd8] hover:bg-[#8bffd8] hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
+		>
+			<PortfolioIcon className="h-4 w-4" />
+			Portfolio</label
 		>
 		<a
 			href="/blog"
-			class="px-3 py-2 rounded-xl text-xs text-[#149fc8] border-1 border border-blue-600 hover:bg-blue-600 hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
-			>Posts</a
+			class="px-3 py-2 flex items-center justify-evenly gap-1 rounded-xl text-xs text-[#149fc8] border-1 border-dashed border border-blue-600 hover:bg-blue-600 hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-4 w-4 fill-current text-[#149fc8]">
+				<path
+					d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"
+				></path>
+			</svg>
+			Posts</a
 		>
 		<label
 			for="my-modal-contact"
-			class="px-3 py-2 rounded-xl text-xs text-[#ffa6c9] border-1 border border-[#ffa6c9] hover:bg-[#ffa6c9] hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
-			>Contact</label
+			class="px-3 py-2 flex items-center justify-evenly gap-1 rounded-xl text-xs text-[#ffa6c9] border-1 border-dashed border border-[#ffa6c9] hover:bg-[#ffa6c9] hover:text-black transition-all duration-150 ease-linear hover:cursor-pointer"
+		>
+			<ContactIcon className="h-4 w-4" />
+			Contact</label
 		>
 	</div>
 </section>
