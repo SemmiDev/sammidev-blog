@@ -11,6 +11,7 @@ import Experience from '~/components/journey/experience';
 import Achievement from '~/components/journey/achievement';
 import Skills from '~/components/journey/skills';
 import Portfolio from '~/components/journey/portfolio';
+import FocusSkills from '~/components/journey/focus-skills';
 
 const meta = {
 	title: SITE.name,
@@ -30,6 +31,17 @@ const meta = {
 			<Contact client:visible />
 			<div class="modal-action">
 				<label for="my-modal-contact" class="btn btn-error">Close</label>
+			</div>
+		</div>
+	</div>
+
+	<!-- focus skills -->
+	<input type="checkbox" id="my-modal-focus-skills" class="modal-toggle" />
+	<div class="modal modal-bottom sm:modal-middle">
+		<div class="modal-box bg-slate-900">
+			<FocusSkills client:visible />
+			<div class="modal-action">
+				<label for="my-modal-focus-skills" class="btn btn-error">Close</label>
 			</div>
 		</div>
 	</div>
