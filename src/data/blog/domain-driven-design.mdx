@@ -1,0 +1,129 @@
+---
+title: 'Domain Driven Design (DDD) with GO'
+description: 'Mengenal DDD dan implementasinya pada bahasa pemrograman Go.'
+publishDate: '2022-12-23'
+author: 'Sammi Aldhi Yanto'
+excerpt: 'Domain-Driven Design (DDD) adalah metode pengembangan sistem yang dikembangkan oleh **Eric Evans** dan diperkenalkan dalam buku terkenalnya yang berjudul "Domain-Driven Design: Tackling Complexity in the Heart of Software"....'
+image: '~/assets/images/shipping.png'
+tags: [DDD, Go]
+canonical: https://sammidev.codes # When posting content to multiple platforms at the same time (such as this website and Medium) and want to specify the ultimate authority. Remove it to automatically generate canonical
+---
+
+## Sejarah singkat
+
+**Domain-Driven Design (DDD)** adalah metode pengembangan sistem yang dikembangkan oleh **Eric Evans** dan diperkenalkan dalam buku terkenalnya yang berjudul "**Domain-Driven Design: Tackling Complexity in the Heart of Software**".
+
+Buku tersebut pertama kali diterbitkan pada tahun **2003** dan telah menjadi sumber referensi yang penting bagi para engineers & architects yang ingin memahami dan menerapkan DDD dalam pengembangan sistem mereka.
+
+DDD merupakan metode pengembangan sistem yang berfokus pada pemahaman yang mendalam tentang **domain bisnis** yang sedang dikembangkan, dengan tujuan untuk membuat sistem yang lebih mudah dipahami, lebih mudah diubah, dan lebih mudah di maintenance.
+
+DDD menekankan pentingnya menggunakan **Ubiquitous Language** sebagai bahasa komunikasi yang luas digunakan oleh seluruh tim yang terlibat dalam pengembangan sistem, serta menggunakan teknik seperti **pemodelan domain, pemodelan konteks, dan pemodelan arsitektur** untuk memahami dan menggambarkan domain yang sedang dikembangkan.
+
+Berikut ini adalah penjelasan singkat tentang **Pemodelan Domain dan Pemodelan Konteks**:
+
+- Pemodelan Domain 👉 Pemodelan domain merupakan teknik untuk menggambarkan konsep-konsep dan proses-proses yang terkait dengan domain bisnis yang sedang dikembangkan. Contoh pemodelan domain mungkin termasuk pemodelan entitas (seperti pelanggan, produk, atau transaksi), relasi antar entitas, dan proses bisnis yang terkait. Pemodelan domain biasanya menggunakan notasi seperti diagram entitas-relasi (ERD) atau diagram use case.
+
+- Pemodelan Konteks 👉 Pemodelan konteks merupakan teknik untuk menggambarkan bagaimana sistem yang sedang dikembangkan akan terintegrasi dengan sistem lain yang ada atau akan datang, serta bagaimana sistem tersebut akan dipakai oleh pengguna atau stakeholder
+
+---
+
+DDD didesain untuk menyelesaikan beberapa masalah utama yang sering dihadapi dalam pengembangan sistem, yaitu:
+
+- Kompleksitas yang tinggi 👉 DDD membantu dalam mengelola kompleksitas yang terkait dengan domain bisnis yang sedang dikembangkan dengan memfokuskan pada pemahaman yang mendalam tentang domain tersebut dan menggunakan teknik seperti pemodelan domain dan pemodelan konteks untuk memahami dan menggambarkan domain tersebut dengan tepat.
+
+- Kurangnya konsistensi dalam penggunaan istilah 👉 DDD menekankan pentingnya menggunakan Ubiquitous Language sebagai bahasa komunikasi yang luas digunakan oleh seluruh tim yang terlibat dalam pengembangan sistem, sehingga membantu dalam menjaga konsistensi dalam penggunaan istilah dan meminimalkan kebingungan atau salah pengertian dalam komunikasi antar tim.
+
+- Kurangnya komunikasi yang efektif antara domain expert dan engineer 👉 DDD menekankan pentingnya menjalin komunikasi yang efektif antara domain expert dan engineer dengan menggunakan **Ubiquitous Language** sebagai bahasa komunikasi yang sama. Ini membantu dalam memastikan bahwa **domain expert** dapat dengan mudah menjelaskan aspek-aspek bisnis yang kompleks atau spesifik dari domain kepada tim teknis yang terlibat dalam pengembangan sistem.
+
+- Sulitnya membuat perubahan pada sistem yang sudah jadi 👉 DDD membantu dalam membuat sistem yang lebih mudah diubah dengan menekankan pentingnya mengatur sistem sesuai dengan **ruang masalah** (problem space) yang sedang dikembangkan, sehingga memudahkan untuk memahami dan memodifikasi sistem sesuai dengan perubahan yang terjadi dalam domain tersebut.
+
+Dari tadi asik ngomongin **domain, ruang masalah** makhluk apa sih itu? 🤣
+
+> **Domain** adalah suatu bidang atau area yang menjadi fokus dari suatu sistem atau aplikasi yang sedang dikembangkan. **Domain dapat merujuk pada bidang bisnis, seperti keuangan, perawatan kesehatan, atau teknologi informasi, atau dapat merujuk pada bidang lain, seperti sains, seni, atau olahraga**.
+
+> **Ruang masalah** (atau "problem space") merupakan konsep yang lebih luas yang merujuk pada seluruh aspek dari suatu domain yang sedang dikembangkan, **termasuk proses, konsep, aturan, dan karakteristik yang terkait dengan domain tersebut**.
+
+Oke, aku kasih contoh ni. Anggaplah kita punya sebuah sistem e-commerce, dan kita mau identify apa saja Domain dan Ruang Masalah nya. Berikut ini beberapa contoh **Domain dan Ruang Masalah** yang mungkin terkait dengan e-commerce:
+
+    - Domain 👉 Penjualan online
+    - Ruang Masalah 👉 Proses pemesanan, pembayaran, pengiriman, dan pengembalian produk; kategorisasi produk; fitur pencarian dan filter produk; integrasi dengan sistem pembayaran dan logistik; integrasi dengan sistem CRM (Customer Relationship Management)
+
+---
+
+    - Domain 👉 Sistem pembayaran online
+    - Ruang Masalah 👉 Integrasi dengan sistem pembayaran yang berbeda; verifikasi identitas dan keabsahan transaksi; pengelolaan risiko dan fraud; fitur pembayaran yang tersedia (misalnya, kartu kredit, debit, atau e-wallet)
+
+---
+
+    - Domain 👉 Analisis data e-commerce
+    - Ruang Masalah 👉 Pengumpulan dan pengolahan data dari sumber yang berbeda (misalnya, log transaksi, data pelanggan, dan data produk); analisis tren dan patokan; integrasi dengan sistem BI (Business Intelligence)
+
+---
+
+    - Domain 👉 Pemasaran online
+    - Ruang Masalah 👉 Iklan dan promosi; target audiens; integrasi dengan sistem iklan; analisis ROI (Return on Investment)
+
+---
+
+Semua **Domain dan Ruang Masalah** tersebut dapat digunakan sebagai acuan dalam pengembangan sistem e-commerce untuk memastikan bahwa sistem tersebut sesuai dengan kebutuhan dan karakteristik dari domain yang sedang dikembangkan.
+
+---
+
+DI dalam **DDD**, **Domain dan Ruang Masalah** sering digunakan bersama-sama untuk memahami dan menggambarkan domain yang sedang dikembangkan, serta untuk menentukan bagaimana sistem atau aplikasi yang sedang dikembangkan harus diatur untuk mewakili domain tersebut dengan tepat.
+
+**Domain Expert** biasanya akan membantu dalam mengidentifikasi dan menggambarkan **Domain dan Ruang Masalah** yang terkait dengan sistem yang sedang dikembangkan.
+
+> Domain Expert adalah seseorang yang memiliki pengetahuan luas dan keahlian yang terkait dengan suatu domain spesifik. Domain Expert bisa berasal dari berbagai latar belakang, seperti ahli bisnis, ahli teknis, atau spesialis lainnya yang memiliki pemahaman yang mendalam tentang suatu domain.
+
+> Domain Expert sering digunakan dalam proses pengembangan sistem untuk memberikan masukan dan menjadi sumber referensi bagi tim yang terlibat dalam pengembangan sistem. Mereka juga bisa membantu dalam menjelaskan aspek-aspek bisnis yang kompleks atau spesifik dari domain kepada tim teknis yang terlibat dalam pengembangan sistem.
+
+> Domain Expert biasanya dianggap sebagai sumber pengetahuan yang penting dalam proses pengembangan sistem, karena mereka dapat memberikan pandangan yang tajam dan pemahaman yang mendalam tentang domain bisnis yang sedang dikembangkan. Mereka juga dapat membantu dalam mengidentifikasi dan menyelesaikan masalah yang terkait dengan domain yang sedang dikembangkan.
+
+## 3 Pilar DDD
+
+- **Ubiquitous language**
+
+  **Ubiquitous Language** adalah istilah yang digunakan dalam Domain-Driven Design (DDD) untuk menggambarkan bahasa yang digunakan secara luas oleh seluruh tim yang terlibat dalam pengembangan suatu sistem. Ubiquitous Language merupakan bahasa yang digunakan sebagai komunikasi antara para ahli domain (misalnya, spesialis bisnis atau konsultan) dan para engineers dalam menggambarkan model dan konsep bisnis yang diimplementasikan dalam sistem.
+
+  Dengan menggunakan **Ubiquitous Language**, tim dapat memastikan bahwa semua anggota tim memahami dengan tepat makna dari setiap konsep yang digunakan dalam sistem. Ini juga membantu dalam menjaga konsistensi dalam penggunaan istilah dan meminimalkan kebingungan atau salah pengertian dalam komunikasi antar tim.
+
+  **Ubiquitous Language** harus diterapkan sejak awal pengembangan sistem, dan harus terus dipertahankan selama proses pengembangan untuk memastikan bahwa semua anggota tim memahami dengan tepat makna dari setiap konsep yang digunakan dalam sistem.
+
+  Contoh **Ubiquitous Language** dapat bervariasi tergantung pada domain bisnis yang sedang dikembangkan. Berikut ini beberapa contoh Ubiquitous Language yang dapat digunakan dalam domain yang berbeda:
+
+  - Dalam domain keuangan 👉 Ubiquitous Language mungkin termasuk istilah-istilah seperti "rekening", "deposito", "kredit", dan "pinjaman".
+
+  - Dalam domain teknologi informasi 👉 Ubiquitous Language mungkin termasuk istilah-istilah seperti "server", "database", "aplikasi web", dan "API".
+
+  - Dalam domain kesehatan 👉 Ubiquitous Language mungkin termasuk istilah-istilah seperti "pasien", "dokter", "resep", dan "diagnosis".
+
+  Dalam domain pemasaran 👉 Ubiquitous Language mungkin termasuk istilah-istilah seperti "target audiens", "kampanye", "lead", dan "conversion".
+
+- **Strategic design**
+
+  Desain strategis adalah fase dari proses DDD di mana kita memetakan domain bisnis dan menentukannya batasan konteks (bounded context).
+
+  Tujuan dari desain strategis adalah untuk memastikan bahwa rancangan sistem kita berfokus pada bisnis hasil.
+
+  Hal ini dilkakukan dengan terlebih dahulu memetakan model domain, yang merupakan representasi abstrak dari ruang masalah. Jika kita mengerjakan **sistem pengiriman**, model domain Anda mungkin terlihat seperti ini:
+
+![Shipping Domain](/shipping.png)
+
+- **Tactical design**
+  Tactical design adalah dimana kita mulai membahas secara spesifik bagaimana sistem kami akan terlihat. Kita mulai berbicara tentang entitas, agregat, dan value object yang nanti kita bahas lebih dalam.
+
+## Kapan sebaiknya menggunakan DDD?
+
+DDD cocok diterapkan pada sistem yang besar dan kompleks. Kalau cuma aplikasi CRUD, Menerapkan pengembangan DDD ke aplikasi semacam itu akan berlebihan dan malah akan menambah kerumitan hehe 😂
+
+Di Buku Merah (Vaughn Vernon with his book **Implementing Domain-Driven Design**), terdapat **DDD scorecard** yang akan membantu anda untuk memutuskan apakah menggunakan DDD atau tidak.
+Hmmm, silahkan lihat asja
+
+![score](/score.png)
+
+Jika skor kamu **lebih dari 7 poin** di tabel, aplikasi kamu adalah calon yang bagus untuk pake **DDD**.
+Jika skor **kurang dari 7**, kamu masih dapat memperoleh manfaat dari beberapa prinsip yang akan kita bahas
+nantinya, but it might be that the time investment necessary to implement DDD properly is not worth
+it 🙂
+
+.... artikel ini belum siap :) next time y
