@@ -1,0 +1,237 @@
+---
+title: 'Deep Learning'
+description: 'Mengenal deep learning.'
+publishDate: '2022-12-23'
+author: 'Sammi Aldhi Yanto'
+excerpt: 'Deep Learning adalah cabang dari machine learning yang menggunakan neural network yang terdiri dari banyak lapisan (layer) untuk memproses data dan membuat prediksi. Neural network ini mirip dengan cara kerja otak manusia dalam menangani informasi dan membuat keputusan.'
+image: '~/assets/images/deep-learning.png'
+tags: [deep-learning, keras, machine-learning]
+canonical: https://sammidev.codes # When posting content to multiple platforms at the same time (such as this website and Medium) and want to specify the ultimate authority. Remove it to automatically generate canonical
+---
+
+# Deep Learning
+
+**Deep Learning** adalah cabang dari **machine learning** yang menggunakan **neural network** yang terdiri dari banyak **lapisan (layer)** untuk memproses data dan membuat prediksi. Neural network ini mirip dengan cara kerja otak manusia dalam menangani informasi dan membuat keputusan.
+
+**Deep learning** sering digunakan untuk menyelesaikan tugas-tugas yang sulit atau tidak mungkin dilakukan oleh algoritma machine learning konvensional, seperti mengenali wajah atau suara, mengklasifikasikan gambar, atau mentranslate bahasa.
+
+Untuk melatih model **deep learning**, Kita perlu menyiapkan data yang cukup besar dan berkualitas tinggi, serta memilih arsitektur yang sesuai untuk model tersebut. Setelah itu, model tersebut akan melalui proses pelatihan dengan menggunakan **teknik optimisasi** yang tepat **untuk mencari nilai weight dan bias** yang optimal agar model dapat menghasilkan prediksi yang akurat.
+
+**Deep learning** sering digunakan dalam aplikasi-aplikasi seperti pengenalan wajah dan suara, pemrosesan bahasa natural, dan pengenalan objek dalam gambar. Namun, deep learning juga dapat digunakan dalam bidang lain, seperti sistem rekomendasi dan pembelajaran mesin yang tidak terstruktur.
+
+---
+
+**Neural Network** adalah model machine learning yang terdiri dari lapisan-lapisan neuron (jaringan saraf) yang terhubung satu sama lain. Setiap neuron menerima input dari lapisan sebelumnya, mengolahnya dengan menggunakan fungsi aktivasi, dan mengirimkan output ke lapisan berikutnya.
+
+Proses ini terjadi secara berulang hingga output akhir dihasilkan. Neural network ini dapat digambarkan sebagai grafik yang terdiri dari node (neuron) dan edge (koneksi antar neuron).
+
+Neural network dapat dibagi menjadi beberapa lapisan, yaitu lapisan input, lapisan hidden, dan lapisan output. Lapisan input menerima input yang akan diolah oleh neural network. Lapisan hidden merupakan lapisan yang terletak di antara lapisan input dan output, yang bertugas mengolah input menjadi output yang sesuai. Lapisan output merupakan lapisan terakhir yang menghasilkan output akhir dari neural network.
+
+Setiap neuron dalam lapisan hidden atau output menerima input dari neuron-neuron di lapisan sebelumnya dan mengolahnya dengan menggunakan fungsi aktivasi. Fungsi aktivasi ini bertugas mengubah input menjadi output yang sesuai dengan memperkenalkan non-linearitas ke dalam model.
+
+Setelah semua input diolah oleh neural network, output akhir dihasilkan dan dapat digunakan untuk membuat prediksi atau mengambil keputusan. Neural network akan terus belajar dan menyesuaikan weight dan bias-nya selama proses pelatihan, sehingga dapat menghasilkan output yang lebih akurat.
+
+**Weight** adalah parameter dalam neural network yang mengontrol **seberapa besar pengaruh setiap input terhadap output**. Weight ini disimpan dalam setiap neuron dalam lapisan **hidden atau output**, dan **akan diupdate selama proses pelatihan** untuk meningkatkan akurasi prediksi.
+
+> "Seberapa besar pengaruh setiap input terhadap output" merujuk pada bagaimana weight dari setiap input mempengaruhi output akhir dari neural network.
+
+> Input dalam konteks ini adalah data yang masuk ke neural network dan akan diolah oleh neural network untuk membuat prediksi atau mengambil keputusan. Misalnya, jika kita memiliki neural network yang digunakan untuk mengklasifikasikan gambar, maka setiap pixel dari gambar tersebut merupakan input untuk neural network tersebut.
+
+> Output adalah hasil akhir yang dihasilkan oleh neural network setelah mengolah semua input. Misalnya, jika kita memiliki neural network yang digunakan untuk mengklasifikasikan gambar berdasarkan apakah gambar tersebut berisi makanan atau bukan, maka output dari neural network tersebut adalah prediksi apakah gambar tersebut berisi makanan atau tidak.
+
+> Weight dari setiap input akan mempengaruhi seberapa besar pengaruh input tersebut terhadap output akhir dari neural network. Jika weight dari suatu input lebih besar, maka input tersebut akan memberikan pengaruh yang lebih besar terhadap output akhir, dan sebaliknya. Weight ini akan diupdate selama proses pelatihan untuk meningkatkan akurasi prediksi dari model.
+
+Contohnya, jika kita memiliki neural network yang digunakan untuk mengklasifikasikan gambar berdasarkan apakah gambar tersebut berisi makanan atau bukan, maka setiap input pixel dari gambar tersebut akan memiliki weight yang berbeda-beda. Weight yang lebih besar akan memberikan pengaruh yang lebih besar terhadap output, dan sebaliknya.
+
+Weight ini akan diupdate selama proses pelatihan dengan menggunakan teknik optimisasi seperti stochastic gradient descent (SGD) atau Adam. Tujuan dari update weight ini adalah untuk meningkatkan akurasi prediksi dari model.
+
+Sebagai contoh, jika kita memiliki neural network yang digunakan untuk mengklasifikasikan gambar berdasarkan apakah gambar tersebut berisi makanan atau bukan, maka weight dari setiap pixel akan diupdate sesuai dengan hasil prediksi yang salah. Jika neural network menganggap gambar tersebut tidak berisi makanan padahal sebenarnya berisi makanan, maka weight dari pixel-pixel yang berhubungan dengan makanan akan ditingkatkan agar neural network lebih cepat mengenali makanan di gambar-gambar selanjutnya.
+
+Weight ada pada setiap neuron yang ada di lapisan hidden atau output dari neural network. Setiap neuron menerima input dari neuron-neuron di lapisan sebelumnya dan mengolahnya dengan menggunakan weight dan fungsi aktivasi untuk menghasilkan output.
+
+Jadi, weight tidak ada pada input pertama kali masuk ke neural network, tetapi ada pada setiap neuron yang ada di lapisan hidden atau output. Setiap neuron akan menerima input dari neuron-neuron di lapisan sebelumnya dan mengolahnya dengan menggunakan weight dan fungsi aktivasi untuk menghasilkan output.
+
+Contohnya, jika kita memiliki neural network yang terdiri dari 3 lapisan (input, hidden, dan output), maka setiap neuron di lapisan hidden dan output akan memiliki weight yang berbeda-beda. Weight ini akan diupdate selama proses pelatihan untuk meningkatkan akurasi prediksi dari model.
+
+---
+
+Berikut adalah contoh sederhana tentang bagaimana weight dan bias dapat digunakan dalam neural network untuk mengolah input menjadi output:
+
+1.  Input:
+    Suppose we have a neural network with one input layer and one output layer. The input layer has 3 neurons, and the output layer has 1 neuron. The input layer receives the following values:
+
+        Neuron 1: 1
+        Neuron 2: 2
+        Neuron 3: 3
+
+2.  Weight:
+    Each neuron in the output layer receives input from all the neurons in the input layer, and each input has a corresponding weight. Suppose the weights are as follows:
+
+        Weight from neuron 1 to output neuron: 0.1
+        Weight from neuron 2 to output neuron: 0.2
+        Weight from neuron 3 to output neuron: 0.3
+
+3.  Bias:
+    A bias is a constant value that is added to the output of the neuron. Suppose the bias for the output neuron is 0.4.
+
+4.  Calculation:
+    The output of the output neuron is calculated as follows:
+
+        output = (1 * 0.1) + (2 * 0.2) + (3 * 0.3) + 0.4
+        = 0.6 + 0.4 + 0.9 + 0.4
+        = 2.3
+
+    In this example, the output of the neural network is 2.3.
+
+---
+
+> Biasanya, weight pada neural network diinisialisasi dengan nilai-nilai acak pada awal proses pelatihan. Inisialisasi dengan nilai-nilai acak dapat membantu menghindari masalah optimisasi yang terjebak pada nilai lokal dan mempercepat proses pelatihan. Namun, tidak ada aturan baku tentang bagaimana weight harus diinisialisasi. Beberapa praktisi deep learning menggunakan teknik inisialisasi weight yang lebih kompleks untuk meningkatkan performa model, seperti inisialisasi dengan nilai-nilai yang didistribusikan secara normal atau menggunakan teknik seperti Glorot initialization atau He initialization. Sebagai catatan, weight pada neural network akan diupdate secara otomatis selama proses pelatihan dengan menggunakan teknik optimisasi seperti stochastic gradient descent (SGD) atau Adam. Update weight ini akan terus dilakukan hingga model mencapai konvergensi atau akurasi yang diinginkan.
+
+---
+
+Bias adalah nilai konstan yang ditambahkan ke output dari neuron pada neural network. Bias ini sering disebut juga dengan "intercept" atau "threshold", dan bias biasanya ditambahkan pada setiap neuron di lapisan hidden atau output.
+
+Bias pada neural network memiliki beberapa kegunaan, diantaranya:
+
+    1. Menghindari nilai output yang sama untuk semua input: Tanpa bias, nilai output dari neuron akan selalu sama untuk semua input yang masuk ke neuron tersebut. Dengan adanya bias, nilai output dari neuron dapat berbeda-beda tergantung pada input yang masuk ke neuron tersebut.
+
+    2. Menyesuaikan output dari neuron: Bias dapat digunakan untuk menyesuaikan output dari neuron agar sesuai dengan kebutuhan. Misalnya, jika kita ingin output dari neuron lebih kecil dari nilai-nilai input yang masuk ke neuron tersebut, maka bias dapat ditambahkan dengan nilai negatif. Sebaliknya, jika kita ingin output dari neuron lebih besar dari nilai-nilai input yang masuk ke neuron tersebut, maka bias dapat ditambahkan dengan nilai positif.
+
+---
+
+Berikut adalah contoh sederhana tentang bagaimana bias dapat digunakan dalam perhitungan output dari neuron:
+
+1.  Input
+    Sebagai contoh, kita memiliki neuron yang menerima 3 input dengan nilai-nilai sebagai berikut:
+
+        Input 1: 1
+        Input 2: 2
+        Input 3: 3
+
+2.  Weight
+    Setiap input memiliki weight yang sesuai. Sebagai contoh, weight-nya adalah sebagai berikut:
+
+         Weight dari input 1: 0.1
+         Weight dari input 2: 0.2
+         Weight dari input 3: 0.3
+
+3.  Bias
+    Bias untuk neuron tersebut adalah 0.4.
+
+4.  Perhitungan:
+    Output dari neuron tersebut dihitung sebagai berikut:
+
+    output = (1 . 0.1) + (2 . 0.2) + (3 . 0.3) + 0.4
+    = 0.6 + 0.4 + 0.9 + 0.4
+    = 2.3
+
+Dalam contoh ini, output dari neuron tersebut adalah 2.3.
+
+Sebagai tambahan, bias pada neural network biasanya diupdate selama proses pelatihan dengan menggunakan teknik optimisasi seperti stochastic gradient descent (SGD) atau Adam. Update bias ini akan terus dilakukan hingga model mencapai konvergensi atau akurasi yang diinginkan.
+
+---
+
+Fungsi aktivasi
+
+Fungsi aktivasi adalah fungsi yang digunakan untuk mengubah output dari neuron pada neural network menjadi nilai-nilai yang sesuai dengan kebutuhan. Fungsi aktivasi biasanya digunakan pada lapisan hidden atau output neural network untuk mengubah output dari neuron menjadi nilai-nilai yang dapat diinterpretasikan oleh model.
+
+Beberapa contoh fungsi aktivasi yang populer digunakan dalam deep learning adalah sigmoid, tanh, ReLU (Rectified Linear Unit), dan Leaky ReLU. Berikut adalah penjelasan singkat tentang masing-masing fungsi aktivasi tersebut:
+
+1. Sigmoid: Fungsi sigmoid mengubah output dari neuron menjadi nilai antara 0 dan 1. Fungsi ini sering digunakan pada lapisan output untuk klasifikasi biner (misalnya, memprediksi apakah sesuatu termasuk ke dalam kelas A atau kelas B).
+
+2. Tanh: Fungsi tanh mengubah output dari neuron menjadi nilai antara -1 dan 1. Fungsi ini sering digunakan pada lapisan hidden untuk mengontrol nilai output dari neuron.
+
+3. ReLU (Rectified Linear Unit): Fungsi ReLU mengubah output dari neuron menjadi nilai nol atau lebih tinggi. Fungsi ini sering digunakan pada lapisan hidden karena mampu meningkatkan kecepatan pelatihan model.
+
+4. Leaky ReLU: Fungsi Leaky ReLU mirip dengan ReLU, tetapi tidak mengubah output dari neuron menjadi nilai nol jika output dari neuron kurang dari nol. Sebaliknya, Leaky ReLU akan mengurangi output dari neuron dengan nilai yang kecil jika output dari neuron kurang dari nol. Fungsi ini dapat membantu menghindari masalah "dead neurons" yang terjadi pada ReLU, di mana sebagian dari neuron tidak mengeluarkan output sama sekali selama proses pelatihan.
+
+Contoh sederhana penggunaan fungsi aktivasi pada neural network adalah sebagai berikut:
+
+1.  Input
+
+        Input 1: 1
+        Input 2: 2
+        Input 3: 3
+
+2.  Weight
+
+        Weight dari input 1: 0.1
+        Weight dari input 2: 0.2
+        Weight dari input 3: 0.3
+
+3.  Bias
+    Bias untuk neuron tersebut adalah 0.4.
+
+4.  Perhitungan
+
+        = (1 * 0.1) + (2 * 0.2) + (3 * 0.3) + 0.4
+        = 0.6 + 0.4 + 0.9 + 0.4
+        = 2.3
+
+    Setelah output dari neuron tersebut dihitung, output tersebut dapat diolah dengan fungsi aktivasi yang sesuai dengan kebutuhan. Sebagai contoh, jika kita menggunakan fungsi sigmoid sebagai fungsi aktivasi, maka output dari neuron tersebut akan diolah dengan rumus berikut:
+
+    output = 1 / (1 + e^(-output))
+    = 1 / (1 + e^(-2.3))
+    = 0.91
+
+    Dengan demikian, output dari neuron tersebut setelah diolah dengan fungsi sigmoid adalah 0.91.
+
+output dari neuron setelah diolah dengan fungsi aktivasi akan dilanjutkan ke lapisan berikutnya sebagai input untuk neuron-neuron di lapisan tersebut.
+
+Beberapa jenis fungsi aktivasi yang populer digunakan dalam deep learning adalah sigmoid, tanh, ReLU (Rectified Linear Unit), dan Leaky ReLU. Berikut adalah penjelasan tentang kapan penggunaan yang cocok dari masing-masing jenis fungsi aktivasi tersebut:
+
+1. Sigmoid: Fungsi sigmoid sering digunakan pada lapisan output untuk klasifikasi biner (misalnya, memprediksi apakah sesuatu termasuk ke dalam kelas A atau kelas B). Fungsi sigmoid juga sering digunakan pada lapisan hidden untuk mengontrol nilai output dari neuron, namun penggunaannya kurang umum dibandingkan dengan fungsi lain.
+
+2. Tanh: Fungsi tanh sering digunakan pada lapisan hidden untuk mengontrol nilai output dari neuron. Fungsi tanh juga dapat digunakan pada lapisan output untuk klasifikasi multi-kelas, namun penggunaannya kurang umum dibandingkan dengan fungsi softmax.
+
+3. ReLU (Rectified Linear Unit): Fungsi ReLU sering digunakan pada lapisan hidden karena mampu meningkatkan kecepatan pelatihan model. Fungsi ReLU juga dapat digunakan pada lapisan output, terutama untuk aplikasi regresi.
+
+4. Leaky ReLU: Fungsi Leaky ReLU mirip dengan ReLU, tetapi tidak mengubah output dari neuron menjadi nol jika output dari neuron kurang dari nol. Sebaliknya, Leaky ReLU akan mengurangi output dari neuron dengan nilai yang kecil jika output dari neuron kurang dari nol. Fungsi ini dapat membantu menghindari masalah "dead neurons" yang terjadi pada ReLU, di mana sebagian dari neuron tidak mengeluarkan output sama sekali selama proses pelatihan. Fungsi Leaky ReLU sering digunakan pada lapisan hidden dan juga dapat digunakan pada lapisan output.
+
+---
+
+Jika lapisan output neural network memiliki lebih dari satu neuron, maka artinya model tersebut memprediksi lebih dari satu kelas atau nilai. Misalnya, jika kita membuat model klasifikasi multi-kelas yang memprediksi kelas A, B, dan C, maka lapisan output neural network tersebut harus memiliki 3 neuron.
+
+Setiap neuron pada lapisan output akan menghasilkan nilai output yang merupakan probabilitas kelas yang diprediksi. Nilai output dari neuron akan diolah dengan fungsi aktivasi yang sesuai dengan kebutuhan, misalnya fungsi softmax untuk klasifikasi multi-kelas.
+
+Contoh sederhana tentang bagaimana lapisan output dengan lebih dari satu neuron bekerja adalah sebagai berikut:
+
+1.  Input:
+    Sebagai contoh, kita memiliki 3 neuron pada lapisan output yang menerima 3 input dengan nilai-nilai sebagai berikut:
+
+        Input 1: 1
+        Input 2: 2
+        Input 3: 3
+
+2.  Weight:
+    Setiap input memiliki weight yang sesuai. Sebagai contoh, weight-nya adalah sebagai berikut:
+
+                Weight dari input 1: 0.1
+                Weight dari input 2: 0.2
+                Weight dari input 3: 0.3
+
+        Bias:
+        Setiap neuron memiliki bias yang sesuai. Sebagai contoh, bias-nya adalah sebagai berikut:
+
+            Bias dari neuron 1: 0.4
+            Bias dari neuron 2: 0.5
+            Bias dari neuron 3: 0.6
+
+    Perhitungan:
+    Output dari masing-masing neuron dihitung sebagai berikut:
+
+        Output dari neuron 1: (1 * 0.1) + (2 * 0.2) + (3 * 0.3) + 0.4 = 0.6 + 0.4 + 0.9 + 0.4 = 2.3
+        Output dari neuron 2: (1 * 0.1) + (2 * 0.2) + (3 * 0.3) + 0.5 = 0.6 + 0.4 + 0.9 + 0.5 = 2.4
+        Output dari neuron 3: (1 * 0.1) + (2 * 0.2) + (3 * 0.3) + 0.6 = 0.6 + 0.4 + 0.9 + 0.6 = 2.5
+
+    Setelah output dari masing-masing neuron dihitung, output tersebut dapat diolah dengan fungsi aktivasi yang sesuai dengan kebutuhan, misalnya fungsi softmax. Fungsi softmax akan mengubah setiap output menjadi probabilitas kelas yang diprediksi, sehingga jumlah probabilitas dari semua kelas akan menjadi 1.
+
+    Contoh hasil dari fungsi softmax adalah sebagai berikut:
+
+        Output dari neuron 1: e^2.3 / (e^2.3 + e^2.4 + e^2.5) = 0.44
+        Output dari neuron 2: e^2.4 / (e^2.3 + e^2.4 + e^2.5) = 0.47
+        Output dari neuron 3: e^2.5 / (e^2.3 + e^2.4 + e^2.5) = 0.09
+
+    Dengan demikian, model tersebut memprediksi kelas A dengan probabilitas 0.44, kelas B dengan probabilitas 0.47, dan kelas C dengan probabilitas 0.09.
+
+Perlu diingat bahwa ini adalah contoh yang sangat sederhana, dan neural network yang sebenarnya biasanya memiliki banyak lapisan dan neuron yang lebih banyak. Namun, prinsip bagaimana lapisan output dengan lebih dari satu neuron bekerja tetap sama.
