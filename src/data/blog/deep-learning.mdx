@@ -235,3 +235,25 @@ Contoh sederhana tentang bagaimana lapisan output dengan lebih dari satu neuron 
     Dengan demikian, model tersebut memprediksi kelas A dengan probabilitas 0.44, kelas B dengan probabilitas 0.47, dan kelas C dengan probabilitas 0.09.
 
 Perlu diingat bahwa ini adalah contoh yang sangat sederhana, dan neural network yang sebenarnya biasanya memiliki banyak lapisan dan neuron yang lebih banyak. Namun, prinsip bagaimana lapisan output dengan lebih dari satu neuron bekerja tetap sama.
+
+---
+
+## keras
+
+Keras adalah sebuah library Python yang digunakan untuk membuat model Machine Learning (ML) dengan mudah. Library ini menyediakan antarmuka yang intuitif untuk membuat model ML, sehingga memudahkan pengguna untuk membuat model ML tanpa harus memahami detail teknis yang terlalu rumit. Keras juga memiliki integrasi dengan beberapa backend populer seperti TensorFlow, Theano, dan CNTK, sehingga memungkinkan pengguna untuk menggunakan library ini dengan mudah pada berbagai platform.
+
+Library ini sangat cocok untuk para peneliti dan pengembang yang ingin membuat model ML dengan cepat, terutama jika mereka tidak memiliki latar belakang yang kuat di bidang kecerdasan buatan (AI) atau ML.
+
+Keras dapat digunakan untuk membuat model deep learning. Deep learning adalah salah satu subfield dari kecerdasan buatan (AI) yang menggunakan jaringan saraf tiruan yang terdiri dari banyak lapisan tersembunyi (hidden layer) untuk mempelajari representasi data yang lebih abstrak. Jaringan saraf tiruan ini dapat mempelajari fitur-fitur yang relevan dari data input dengan sendirinya, tanpa harus diberi tahu secara eksplisit oleh programmer.
+
+Keras menyediakan berbagai macam fungsi dan kelas yang dapat digunakan untuk membuat model deep learning, seperti kelas untuk membuat lapisan-lapisan jaringan saraf tiruan, kelas untuk mengoptimalkan model dengan menggunakan algoritma optimisasi seperti stochastic gradient descent (SGD), dan kelas untuk mengevaluasi model dengan menggunakan metric seperti akurasi dan loss. Dengan menggunakan Keras, Anda dapat dengan mudah membuat model deep learning dengan hanya beberapa baris kode saja.
+
+Keras menyediakan beberapa jenis optimizer yang dapat digunakan untuk mengupdate weight dan bias pada model neural network selama proses pelatihan. Berikut adalah beberapa optimizer yang tersedia di Keras:
+
+1. Stochastic gradient descent (SGD): Merupakan teknik optimisasi yang paling sederhana yang dapat digunakan pada neural network. SGD akan mengambil langkah-langkah kecil terhadap gradien dari error model selama proses pelatihan.
+2. Adam (Adaptive Moment Estimation): Merupakan teknik optimisasi yang menggabungkan konsep SGD dengan teknik penyesuaian momentum. Adam akan mengambil langkah-langkah yang lebih besar pada gradien yang memiliki kecenderungan yang sama dari waktu ke waktu, sehingga proses pelatihan dapat berlangsung lebih cepat.
+3. RMSprop (Root Mean Square Propagation): Merupakan teknik optimisasi yang menggunakan rata-rata kuadrat dari gradien untuk mengupdate weight dan bias pada model. RMSprop akan mengurangi learning rate secara otomatis jika gradien memiliki variasi yang besar, sehingga proses pelatihan dapat berlangsung lebih stabil.
+4. Adagrad (Adaptive Gradient Algorithm): Merupakan teknik optimisasi yang mengurangi learning rate secara bertahap selama proses pelatihan. Adagrad akan mengurangi learning rate lebih cepat pada gradien yang memiliki variasi yang kecil, sehingga proses pelatihan dapat berlangsung lebih cepat pada gradien yang memiliki variasi yang besar.
+5. Adadelta: Merupakan teknik optimisasi yang mirip dengan Adagrad, tetapi tidak menggunakan learning rate tetap. Adadelta akan mengubah learning rate secara otomatis sesuai dengan variasi gradien yang terjadi selama proses pelatihan.
+6. Adamax: Merupakan teknik optimisasi yang menggabungkan konsep Adam dengan teknik penyesuaian momentum yang lebih agresif. Adamax akan mengambil langkah-langkah yang lebih besar pada gradien yang memiliki kecenderungan yang sama dari waktu ke waktu, sehingga proses pelatihan dapat berlangsung lebih cepat.
+7. Nadam (Nesterov Adam): Merupakan teknik optimisasi yang menggabungkan konsep Adam dengan teknik Nesterov momentum. Nadam akan mengambil
